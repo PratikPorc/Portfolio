@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Pratik Guha Roy",
   role: "Backend Developer & AI Engineer",
   location: "Kolkata, India",
-  email: "pratik@example.com",
+  email: "pratikguharoystads@gmail.com",
   bio: [
     "I'm a backend developer and AI engineer based in Kolkata, India. I specialise in building the invisible layer that makes software intelligent — from high-performance APIs to LLM-powered automation systems.",
     "My stack of choice: Go for performance-critical services, Python for AI/ML pipelines, and Node.js for rapid iteration. I believe great software is built at the intersection of rigorous engineering and creative problem-solving.",
@@ -19,7 +19,7 @@ export const personalInfo = {
 export const typingRoles = [
   "Backend Developer",
   "AI Engineer",
-  "Builder",
+  "Agentic AI architecht",
   "Go Developer",
   "ML Practitioner",
 ];
