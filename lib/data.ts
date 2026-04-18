@@ -9,9 +9,10 @@ export const personalInfo = {
     "When I'm not pushing commits, I'm exploring MUNs, filmmaking, playing the drums, or diving deep into competitive chess.",
   ],
   social: {
-    github: "https://github.com/pratikguharoy",
-    kaggle: "https://kaggle.com/pratikguharoy",
+    github: "https://github.com/PratikPorc",
+    linkedin: "https://linkedin.com/in/pratikfromindia",
     leetcode: "https://leetcode.com/pratikguharoy",
+    instagram: "https://instagram.com/proooteeek",
   },
 };
 
@@ -196,8 +197,9 @@ export const hackathons = [
 
 export const extracurriculars = [
   { icon: "Mic", name: "MUN" },
-  { icon: "Clapperboard", name: "Film Making" },
   { icon: "Music", name: "Drums" },
-  { icon: "Gamepad2", name: "Chess" },
   { icon: "Palette", name: "Painting" },
+  { icon: "Megaphone", name: "Public Speaking" },
+  { icon: "Gamepad2", name: "Chess" },
+  { icon: "Clapperboard", name: "Film Making" },
 ];

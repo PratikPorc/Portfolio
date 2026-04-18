@@ -7,9 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle, XCircle } from "lucide-react";
 
 const socialLinks = [
-  { icon: "⌥", label: "github.com/pratikguharoy", href: personalInfo.social.github },
-  { icon: "◈", label: "kaggle.com/pratikguharoy", href: personalInfo.social.kaggle },
+  { icon: "⌥", label: "github.com/PratikPorc", href: personalInfo.social.github },
+  { icon: "◈", label: "linkedin.com/in/pratikfromindia", href: personalInfo.social.linkedin },
   { icon: "⌘", label: "leetcode.com/pratikguharoy", href: personalInfo.social.leetcode },
+  { icon: "⌃", label: "instagram.com/proooteeek", href: personalInfo.social.instagram },
 ];
 
 const inputStyle: React.CSSProperties = {
@@ -47,23 +48,23 @@ export default function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await res.json();
-      
+
       if (!res.ok) {
         throw new Error(data.error || "Unknown error occurred.");
       }
 
       setStatus("success");
       setFormData({ name: "", email: "", message: "", _honeypot: "" });
-      
+
       // Auto-hide success message
       setTimeout(() => setStatus("idle"), 5000);
     } catch (err: any) {
       console.error(err);
       setStatus("error");
       setErrorMessage(err.message || "Oh no! Looks like something's off. Please try again.");
-      
+
       // Auto-hide error message
       setTimeout(() => setStatus("idle"), 5000);
     }
@@ -150,12 +151,12 @@ export default function Contact() {
           {/* Honeypot field for spam prevention */}
           <div style={{ display: "none" }}>
             <label htmlFor="_honeypot">Do not fill this out if you are human</label>
-            <input 
-              type="text" 
-              id="_honeypot" 
-              value={formData._honeypot} 
-              onChange={handleChange} 
-              tabIndex={-1} 
+            <input
+              type="text"
+              id="_honeypot"
+              value={formData._honeypot}
+              onChange={handleChange}
+              tabIndex={-1}
               autoComplete="off"
             />
           </div>

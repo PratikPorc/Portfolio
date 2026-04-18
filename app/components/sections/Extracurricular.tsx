@@ -3,7 +3,7 @@ import React from "react";
 import Section from "../ui/Section";
 import SectionHeader from "../ui/SectionHeader";
 import { extracurriculars } from "@/lib/data";
-import { Mic, Clapperboard, Music, Gamepad2, Palette } from "lucide-react";
+import { Mic, Clapperboard, Music, Gamepad2, Palette, Megaphone } from "lucide-react";
 
 const iconMap: Record<string, React.ElementType> = {
   Mic,
@@ -11,6 +11,7 @@ const iconMap: Record<string, React.ElementType> = {
   Music,
   Gamepad2,
   Palette,
+  Megaphone,
 };
 
 export default function Extracurricular() {
@@ -57,16 +58,16 @@ export default function Extracurricular() {
               {/* 
                  IMAGE PLACEHOLDER SYSTEM
                  Replace these images with actual files in `public/assets/placeholders/`.
-                 Recommended resolution: 1280x720 pixels (16:9 aspect ratio) for best quality.
+                 Recommended resolution: 800x800 pixels (1:1 aspect ratio) for best quality.
               */}
-              <div style={{ position: "relative", width: "100%", aspectRatio: "16/9", background: "var(--bg2)" }}>
+              <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", background: "var(--bg2)" }}>
                 <img
                   loading="lazy"
-                  src={`/assets/placeholders/activity-${(index % 3) + 1}.png`}
+                  src={`/assets/placeholders/activity-${index + 1}.png`}
                   alt={e.name}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   onError={(err) => {
-                    (err.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" preserveAspectRatio="none"><rect width="1280" height="720" fill="%23222" /><text x="640" y="360" font-family="sans-serif" font-size="48" text-anchor="middle" dominant-baseline="middle" fill="%23555">Image Placeholder (1280x720)</text></svg>';
+                    (err.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" preserveAspectRatio="none"><rect width="800" height="800" fill="%23222" /><text x="400" y="400" font-family="sans-serif" font-size="48" text-anchor="middle" dominant-baseline="middle" fill="%23555">Image Placeholder (800x800)</text></svg>';
                   }}
                 />
                 {/* Gradient overlay for blending and readability */}

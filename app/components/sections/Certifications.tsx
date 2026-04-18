@@ -4,10 +4,15 @@ import Section from "../ui/Section";
 import SectionHeader from "../ui/SectionHeader";
 
 const certificates = [
-  { id: 1, title: "AWS Solutions Architect", img: "/assets/certificates/cert-1.png" },
-  { id: 2, title: "Google Cloud Professional Developer", img: "/assets/certificates/cert-2.png" },
-  { id: 3, title: "Certified Kubernetes Administrator", img: "/assets/certificates/cert-3.png" },
-  { id: 4, title: "Machine Learning Core", img: "/assets/certificates/cert-1.png" },
+  { id: 1, title: "Calyco Internship", img: "/assets/certificates/cert-1.png" },
+  { id: 2, title: "Prompt Engineering by IBM", img: "/assets/certificates/cert-2.png" },
+  { id: 3, title: "Machine Learning with Python by IBM", img: "/assets/certificates/cert-3.png" },
+  { id: 4, title: "JavaScript Bootcamp by LetsUpgrade", img: "/assets/certificates/cert-4.png" },
+  { id: 5, title: "Project based ML & AI by IBM", img: "/assets/certificates/cert-5.png" },
+  { id: 6, title: "Postman API fundamentals", img: "/assets/certificates/cert-6.png" },
+  { id: 7, title: "Canva Bootcamp by IBM", img: "/assets/certificates/cert-7.png" },
+  { id: 8, title: "Deep LEarning with TensorFlow by IBM", img: "/assets/certificates/cert-8.png" },
+  { id: 9, title: "ML with Python badge by IBM", img: "/assets/certificates/cert-9.png" },
 ];
 
 export default function Certifications() {
