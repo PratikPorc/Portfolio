@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { typingRoles, personalInfo } from "@/lib/data";
 
+import ProfileCard from "../ui/ProfileCard";
+
 export default function Hero() {
   const [typed, setTyped] = useState("");
   const [roleIdx, setRoleIdx] = useState(0);
@@ -92,128 +94,162 @@ export default function Hero() {
         }}
       />
 
-      {/* Content */}
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 900 }}>
-        <p
-          style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: "0.75rem",
-            color: "var(--accent2)",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            marginBottom: "1.5rem",
-            animation: "fadeUp 0.6s 0.2s both",
-          }}
-        >
-          // Available for opportunities
-        </p>
-
-        <h1
-          style={{
-            fontSize: "clamp(3rem,8vw,7rem)",
-            fontWeight: 800,
-            lineHeight: 0.95,
-            marginBottom: "1rem",
-            animation: "fadeUp 0.7s 0.4s both",
-          }}
-        >
-          <div style={{ color: "var(--text)" }}>Pratik</div>
-          <div className="gradient-text">Guha Roy</div>
-        </h1>
-
-        <p
-          style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: "1.1rem",
-            color: "var(--text2)",
-            marginBottom: "2rem",
-            height: "2rem",
-            animation: "fadeUp 0.7s 0.6s both",
-          }}
-        >
-          {typed}
-          <span className="cursor-blink" />
-        </p>
-
-        <p
-          style={{
-            fontSize: "1rem",
-            color: "var(--text2)",
-            maxWidth: 520,
-            lineHeight: 1.7,
-            marginBottom: "3rem",
-            animation: "fadeUp 0.7s 0.8s both",
-          }}
-        >
-          Passionate backend developer with strong experience in Go, Node.js,
-          and AI/ML systems. Building scalable APIs, AI automation workflows,
-          and intelligent systems that matter.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "1rem",
-            flexWrap: "wrap",
-            animation: "fadeUp 0.7s 1s both",
-          }}
-        >
-          <a
-            href="#projects"
+      {/* Content Layout */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          maxWidth: 1200,
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "4rem",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* Left Side: Text */}
+        <div style={{ flex: "1 1 500px", minWidth: 300 }}>
+          <p
             style={{
-              padding: "0.875rem 2rem",
-              background: "linear-gradient(135deg,var(--accent1),var(--accent2))",
-              color: "#fff",
-              border: "none",
-              borderRadius: 6,
-              fontFamily: "'Syne',sans-serif",
-              fontSize: "0.9rem",
-              fontWeight: 600,
-              cursor: "none",
-              transition: "transform 0.2s,box-shadow 0.2s",
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 10px 40px var(--glow1)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.transform = "";
-              (e.currentTarget as HTMLElement).style.boxShadow = "";
+              fontFamily: "'Space Mono', monospace",
+              fontSize: "0.75rem",
+              color: "var(--accent2)",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              marginBottom: "1.5rem",
+              animation: "fadeUp 0.6s 0.2s both",
             }}
           >
-            View Projects
-          </a>
-          <a
-            href="#contact"
+            // Available for opportunities
+          </p>
+
+          <h1
             style={{
-              padding: "0.875rem 2rem",
-              background: "transparent",
-              color: "var(--text)",
-              border: "1px solid var(--border2)",
-              borderRadius: 6,
-              fontFamily: "'Syne',sans-serif",
-              fontSize: "0.9rem",
-              fontWeight: 600,
-              cursor: "none",
-              transition: "all 0.2s",
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "var(--accent2)";
-              (e.currentTarget as HTMLElement).style.color = "var(--accent2)";
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px var(--glow2)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "var(--border2)";
-              (e.currentTarget as HTMLElement).style.color = "var(--text)";
-              (e.currentTarget as HTMLElement).style.boxShadow = "";
+              fontSize: "clamp(3rem,8vw,6rem)",
+              fontWeight: 800,
+              lineHeight: 0.95,
+              marginBottom: "1rem",
+              animation: "fadeUp 0.7s 0.4s both",
             }}
           >
-            Contact Me
-          </a>
+            <div style={{ color: "var(--text)" }}>Pratik</div>
+            <div className="gradient-text">Guha Roy</div>
+          </h1>
+
+          <p
+            style={{
+              fontFamily: "'Space Mono', monospace",
+              fontSize: "1.1rem",
+              color: "var(--text2)",
+              marginBottom: "2rem",
+              height: "2rem",
+              animation: "fadeUp 0.7s 0.6s both",
+            }}
+          >
+            {typed}
+            <span className="cursor-blink" />
+          </p>
+
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--text2)",
+              maxWidth: 520,
+              lineHeight: 1.7,
+              marginBottom: "3rem",
+              animation: "fadeUp 0.7s 0.8s both",
+            }}
+          >
+            Passionate backend developer with strong experience in Go, Node.js,
+            and AI/ML systems. Building scalable APIs, AI automation workflows,
+            and intelligent systems that matter.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "1rem",
+              flexWrap: "wrap",
+              animation: "fadeUp 0.7s 1s both",
+            }}
+          >
+            <a
+              href="#projects"
+              style={{
+                padding: "0.875rem 2rem",
+                background: "linear-gradient(135deg,var(--accent1),var(--accent2))",
+                color: "#fff",
+                border: "none",
+                borderRadius: 6,
+                fontFamily: "'Syne',sans-serif",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+                cursor: "none",
+                transition: "transform 0.2s,box-shadow 0.2s",
+                textDecoration: "none",
+                display: "inline-block",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 10px 40px var(--glow1)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = "";
+                (e.currentTarget as HTMLElement).style.boxShadow = "";
+              }}
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              style={{
+                padding: "0.875rem 2rem",
+                background: "transparent",
+                color: "var(--text)",
+                border: "1px solid var(--border2)",
+                borderRadius: 6,
+                fontFamily: "'Syne',sans-serif",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+                cursor: "none",
+                transition: "all 0.2s",
+                textDecoration: "none",
+                display: "inline-block",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "var(--accent2)";
+                (e.currentTarget as HTMLElement).style.color = "var(--accent2)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px var(--glow2)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "var(--border2)";
+                (e.currentTarget as HTMLElement).style.color = "var(--text)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "";
+              }}
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        {/* Right Side: Profile Card */}
+        <div 
+          style={{ 
+            flex: "0 1 400px", 
+            width: "100%",
+            display: "flex", 
+            justifyContent: "center",
+            animation: "fadeUp 0.8s 0.8s both"
+          }}
+        >
+          <ProfileCard
+            avatarUrl="/assets/me.png"
+            name=""
+            title=""
+            showUserInfo={false}
+            behindGlowEnabled={true}
+          />
         </div>
       </div>
 

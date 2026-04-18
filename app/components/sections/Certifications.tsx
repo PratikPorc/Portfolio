@@ -18,7 +18,7 @@ const certificates = [
 export default function Certifications() {
   return (
     <Section id="certifications">
-      <SectionHeader num="07" label="Continuous Learning" title="Certifications" />
+      <SectionHeader num="06" label="Continuous Learning" title="Certifications" />
       
       {/* 
          CERTIFICATE PLACEHOLDER SYSTEM

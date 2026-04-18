@@ -6,7 +6,7 @@ import { education } from "@/lib/data";
 export default function Education() {
     return (
         <Section id="education">
-            <SectionHeader num="04" label="Education" title="Academic Path" />
+            <SectionHeader num="03" label="Education" title="Academic Path" />
             <div style={{ display: "grid", gap: "1.25rem" }}>
                 {education.map((e, i) => (
                     <div

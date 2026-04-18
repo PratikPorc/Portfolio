@@ -72,7 +72,7 @@ export default function Contact() {
 
   return (
     <Section id="contact">
-      <SectionHeader num="07" label="Contact" title="Let's Connect" />
+      <SectionHeader num="09" label="Contact" title="Let's Connect" />
       <div className="contact-grid">
         {/* Left */}
         <div>

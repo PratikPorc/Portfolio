@@ -18,7 +18,7 @@ export default function Projects() {
 
   return (
     <Section id="projects">
-      <SectionHeader num="06" label="Projects" title="What I've Built" />
+      <SectionHeader num="05" label="Projects" title="What I've Built" />
 
       {/* Filter bar */}
       <div

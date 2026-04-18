@@ -17,7 +17,7 @@ const iconMap: Record<string, React.ElementType> = {
 export default function Extracurricular() {
   return (
     <Section id="extra">
-      <SectionHeader num="09" label="Beyond Code" title="What Else I Do" />
+      <SectionHeader num="08" label="Beyond Code" title="What Else I Do" />
       <div
         style={{
           display: "grid",
