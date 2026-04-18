@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { typingRoles, personalInfo } from "@/lib/data";
 
 import ProfileCard from "../ui/ProfileCard";
+import MediaPlayer from "../ui/MediaPlayer";
 
 export default function Hero() {
   const [typed, setTyped] = useState("");
@@ -233,12 +234,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Side: Profile Card */}
+        {/* Right Side: Profile Card & Media */}
         <div 
           style={{ 
             flex: "0 1 400px", 
             width: "100%",
             display: "flex", 
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "1.5rem",
             justifyContent: "center",
             animation: "fadeUp 0.8s 0.8s both"
           }}
@@ -250,6 +254,7 @@ export default function Hero() {
             showUserInfo={false}
             behindGlowEnabled={true}
           />
+          <MediaPlayer />
         </div>
       </div>
 
