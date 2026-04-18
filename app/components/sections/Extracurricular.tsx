@@ -17,7 +17,7 @@ const iconMap: Record<string, React.ElementType> = {
 export default function Extracurricular() {
   return (
     <Section id="extra">
-      <SectionHeader num="06" label="Beyond Code" title="What Else I Do" />
+      <SectionHeader num="09" label="Beyond Code" title="What Else I Do" />
       <div
         style={{
           display: "grid",
@@ -34,7 +34,7 @@ export default function Extracurricular() {
               style={{
                 background: "var(--bg3)",
                 border: "1px solid var(--border)",
-                borderRadius: "1rem", /* 2xl border radius */
+                borderRadius: "1rem",
                 overflow: "hidden",
                 transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                 cursor: "none",
@@ -55,10 +55,10 @@ export default function Extracurricular() {
                 t.style.boxShadow = "";
               }}
             >
-              {/* 
-                 IMAGE PLACEHOLDER SYSTEM
-                 Replace these images with actual files in `public/assets/placeholders/`.
-                 Recommended resolution: 800x800 pixels (1:1 aspect ratio) for best quality.
+              {/*
+                IMAGE PLACEHOLDER SYSTEM
+                Replace these images with actual files in `public/assets/placeholders/`.
+                Recommended resolution: 800x800 pixels (1:1 aspect ratio) for best quality.
               */}
               <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", background: "var(--bg2)" }}>
                 <img
@@ -67,16 +67,26 @@ export default function Extracurricular() {
                   alt={e.name}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   onError={(err) => {
-                    (err.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" preserveAspectRatio="none"><rect width="800" height="800" fill="%23222" /><text x="400" y="400" font-family="sans-serif" font-size="48" text-anchor="middle" dominant-baseline="middle" fill="%23555">Image Placeholder (800x800)</text></svg>';
+                    (err.target as HTMLImageElement).src =
+                      'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" preserveAspectRatio="none"><rect width="800" height="800" fill="%23222" /><text x="400" y="400" font-family="sans-serif" font-size="48" text-anchor="middle" dominant-baseline="middle" fill="%23555">Image Placeholder (800x800)</text></svg>';
                   }}
                 />
-                {/* Gradient overlay for blending and readability */}
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, var(--bg3) 0%, transparent 60%)" }} />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to top, var(--bg3) 0%, transparent 60%)",
+                  }}
+                />
               </div>
-              
+
               <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flexGrow: 1 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
-                  {Icon && <span style={{ color: "var(--accent2)" }}><Icon size={24} strokeWidth={1.5} /></span>}
+                  {Icon && (
+                    <span style={{ color: "var(--accent2)" }}>
+                      <Icon size={24} strokeWidth={1.5} />
+                    </span>
+                  )}
                   <div style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--text)" }}>
                     {e.name}
                   </div>

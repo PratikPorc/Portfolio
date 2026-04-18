@@ -29,7 +29,7 @@ const badgeStyles: Record<string, { bg: string; color: string; border: string }>
 export default function Hackathons() {
   return (
     <Section id="hackathons">
-      <SectionHeader num="05" label="Achievements" title="Wins & Recognition" />
+      <SectionHeader num="08" label="Achievements" title="Wins & Recognition" />
       <div
         style={{
           display: "grid",

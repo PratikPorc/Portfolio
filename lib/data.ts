@@ -1,12 +1,19 @@
+// ─────────────────────────────────────────────
+//  PRATIK GUHA ROY — Portfolio Data
+//  Source of truth for all portfolio content.
+//  Edit this file to update the site.
+// ─────────────────────────────────────────────
+
 export const personalInfo = {
   name: "Pratik Guha Roy",
   role: "Backend Developer & AI Engineer",
   location: "Kolkata, India",
+  phone: "+91 9903693894",
   email: "pratikguharoystads@gmail.com",
   bio: [
-    "I'm a backend developer and AI engineer based in Kolkata, India. I specialise in building the invisible layer that makes software intelligent — from high-performance APIs to LLM-powered automation systems.",
-    "My stack of choice: Go for performance-critical services, Python for AI/ML pipelines, and Node.js for rapid iteration. I believe great software is built at the intersection of rigorous engineering and creative problem-solving.",
-    "When I'm not pushing commits, I'm exploring MUNs, filmmaking, playing the drums, or diving deep into competitive chess.",
+    "I'm a B.Tech CSE student and AI/Backend engineer based in Kolkata, India. I specialise in building the invisible layer that makes software intelligent — from scalable service-oriented APIs to LLM-powered agentic automation systems.",
+    "My stack of choice: Go & Node.js for backend services, Python for AI/ML pipelines, and FastAPI for production ML inference. Currently interning as an AI Engineer, building agentic voice & text bots and backend infrastructure.",
+    "When I'm not pushing commits, I'm participating in MUNs, producing short films, playing drums, or sharpening my chess game.",
   ],
   social: {
     github: "https://github.com/PratikPorc",
@@ -19,32 +26,32 @@ export const personalInfo = {
 export const typingRoles = [
   "Backend Developer",
   "AI Engineer",
-  "Agentic AI architecht",
+  "Agentic AI Architect",
   "Go Developer",
   "ML Practitioner",
 ];
 
 export const stats = [
-  { num: "5+", label: "Projects Built" },
+  { num: "10+", label: "Projects Built" },
   { num: "2", label: "Hackathon Wins" },
-  { num: "∞", label: "Lines of Code" },
+  { num: "3", label: "Internships" },
 ];
 
 export const strengths = [
   {
-    icon: "Server",
+    icon: "⚙️",
     title: "Backend Systems",
-    desc: "Scalable microservices, RESTful APIs, and distributed systems with Go and Node.js",
+    desc: "Scalable service-oriented APIs, microservices, and backend infrastructure using Go, Node.js, and Express",
   },
   {
-    icon: "BrainCircuit",
+    icon: "🧠",
     title: "AI/ML Engineering",
-    desc: "LLMs, CNNs, TensorFlow, PyTorch — building intelligent systems from scratch",
+    desc: "LLMs, CNNs, TensorFlow, PyTorch — building intelligent systems from image classifiers to agentic bots",
   },
   {
-    icon: "Bot",
-    title: "Automation & LLMs",
-    desc: "AI workflows, MCP integrations, and intelligent automation pipelines",
+    icon: "🤖",
+    title: "Agentic AI & Automation",
+    desc: "AI automation workflows, MCP integrations, multi-channel agent orchestration and LLM-powered pipelines",
   },
 ];
 
@@ -52,62 +59,82 @@ export const skillGroups = [
   {
     label: "Languages",
     skills: [
-      { name: "Go", level: 90 },
-      { name: "Python", level: 88 },
+      { name: "Python", level: 90 },
+      { name: "Go (Golang)", level: 85 },
       { name: "JavaScript", level: 82 },
       { name: "TypeScript", level: 75 },
     ],
   },
   {
-    label: "Backend",
+    label: "Backend & APIs",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "FastAPI", level: 80 },
-      { name: "Express.js", level: 82 },
-      { name: "REST / GraphQL", level: 78 },
+      { name: "Node.js / Express", level: 85 },
+      { name: "FastAPI", level: 82 },
+      { name: "REST API / JWT / OAuth", level: 85 },
+      { name: "WebSockets", level: 72 },
     ],
   },
   {
     label: "AI / ML",
     skills: [
-      { name: "TensorFlow", level: 80 },
+      { name: "TensorFlow / Keras", level: 82 },
       { name: "PyTorch", level: 75 },
-      { name: "CNNs", level: 78 },
-      { name: "LLM Integration", level: 85 },
+      { name: "CNNs / Deep Learning", level: 80 },
+      { name: "LLM / Gemini / Prompt Eng.", level: 88 },
     ],
   },
   {
-    label: "Tools & Infra",
+    label: "Tools & Databases",
     skills: [
       { name: "Docker", level: 80 },
-      { name: "Git / GitHub", level: 90 },
-      { name: "PostgreSQL", level: 75 },
-      { name: "Postman", level: 85 },
+      { name: "Git / GitHub / CI-CD", level: 88 },
+      { name: "PostgreSQL / MySQL / MongoDB", level: 78 },
+      { name: "Postman / Swagger", level: 87 },
     ],
   },
 ];
 
 export const experiences = [
   {
-    role: "AI / Backend Engineer Intern",
-    company: "Tech Startup — Kolkata",
-    date: "2024 — Present",
-    desc: "Built AI invoice processing system using LLMs and OCR. Developed scalable REST APIs in Go handling thousands of concurrent requests. Implemented ML inference pipelines deployed with Docker.",
-    tags: ["Go", "Python", "LLMs", "Docker", "FastAPI"],
+    role: "AI Intern",
+    company: "Better Best Software Solutions, Virtual",
+    date: "Dec 2025 — Present",
+    desc: "Architected and built backend systems for multiple projects using scalable service-oriented design. Tested and optimised API Gateway implementations to improve service reliability. Developed agentic AI text and voice bots for automated customer support and client engagement.",
+    tags: ["Go", "Node.js", "Agentic AI", "API Gateway", "LLMs"],
   },
   {
-    role: "ML Research Contributor",
-    company: "Academic Project",
-    date: "2023 — 2024",
-    desc: "Developed a CNN-based lung cancer detection model achieving 94%+ accuracy. Implemented data augmentation pipelines and model evaluation frameworks with TensorFlow and PyTorch.",
-    tags: ["TensorFlow", "CNN", "Python", "PyTorch"],
+    role: "AI Automation Intern",
+    company: "Calyco Products Pvt Ltd, Virtual",
+    date: "Jul 2025 — Sep 2025",
+    desc: "Built AI-driven automation workflows using Tasker and Python to streamline internal processes. Integrated LLMs to parse emails, understand buyer requests, and generate intelligent responses. Developed end-to-end automation pipelines for lead processing and data management. Collaborated on multi-channel AI agent orchestration to improve workflow efficiency.",
+    tags: ["Python", "LLMs", "Automation", "Tasker", "NLP"],
   },
   {
-    role: "Full-Stack Developer",
-    company: "Freelance / Open Source",
-    date: "2022 — 2023",
-    desc: "Built multiple production-grade APIs and automation tools. Containerised services with Docker, integrated third-party AI models, and contributed to open-source ML tooling.",
-    tags: ["Node.js", "Express", "Docker", "MongoDB"],
+    role: "Internshala Student Partner",
+    company: "Internshala, Virtual",
+    date: "Mar 2024 — Aug 2024",
+    desc: "Drove student outreach and community building on campus. Developed strong sales, communication, and deadline management skills while growing a peer network.",
+    tags: ["Community Building", "Sales", "Communication"],
+  },
+];
+
+export const education = [
+  {
+    degree: "B.Tech, Computer Science & Engineering",
+    institution: "Techno India University",
+    year: "2023 — 2027",
+  },
+  {
+    degree: "Senior Secondary (XII) — Science, CISCE",
+    institution: "St. Augustine's Day School, Barrackpore",
+    year: "2023",
+    score: "97.50%",
+  },
+  {
+    degree: "Secondary (X) — ICSE",
+    institution: "St. Augustine's Day School, Barrackpore",
+    year: "2021",
+    score: "96.00%",
   },
 ];
 
@@ -117,89 +144,174 @@ export const projects = [
   {
     num: "01",
     cat: "ai" as ProjectCategory,
-    title: "AI Invoice Processing System",
-    desc: "Intelligent document processing pipeline that extracts, validates, and categorises invoice data using LLMs and OCR. Reduces manual processing time by 90%.",
-    stack: ["Python", "LLMs", "OCR", "FastAPI", "Docker"],
-    github: "https://github.com/pratikguharoy",
+    title: "AI Invoice Processing & GST Compliance System",
+    desc: "End-to-end invoice pipeline using OCR (Tesseract/pdfplumber) and Google Gemini for JSON extraction. Validation agent for GST compliance — GSTIN verification, CGST/SGST/IGST checks, duplicate detection. Integrated Supabase + Neo4j for storage and business relationship graphs. Auto-generates GSTR-1 and GSTR-3B returns.",
+    stack: ["Python", "Gemini", "OCR", "Supabase", "Neo4j", "FastAPI"],
+    github: "https://github.com/PratikPorc",
+    date: "Apr 2026",
   },
   {
     num: "02",
     cat: "ml" as ProjectCategory,
     title: "Lung Cancer Detection (CNN)",
-    desc: "Deep learning model using Convolutional Neural Networks to detect lung cancer from CT scan images with 94%+ accuracy. Trained on curated medical imaging datasets.",
-    stack: ["TensorFlow", "CNN", "Python", "PyTorch"],
-    github: "https://github.com/pratikguharoy",
+    desc: "CNN trained on the Lung and Colon cancer histopathological images dataset from Kaggle to classify CT scan images as cancerous or normal with high accuracy.",
+    stack: ["TensorFlow", "Keras", "CNN", "Python", "Kaggle"],
+    github: "https://github.com/PratikPorc",
+    date: "Nov 2025",
   },
   {
     num: "03",
     cat: "backend" as ProjectCategory,
-    title: "Iris ML API",
-    desc: "Production-grade ML inference API built with FastAPI, containerised with Docker. Exposes Iris classification model via clean RESTful endpoints with full documentation.",
-    stack: ["FastAPI", "Docker", "scikit-learn", "Python"],
-    github: "https://github.com/pratikguharoy",
+    title: "Iris Classification — Docker + FastAPI",
+    desc: "Dockerized FastAPI ML inference API classifying Iris flower species using a trained Decision Tree from scikit-learn. Features Pydantic validation, Swagger UI at /docs, and portable Docker deployment.",
+    stack: ["FastAPI", "Docker", "scikit-learn", "Python", "Swagger"],
+    github: "https://github.com/PratikPorc",
+    date: "Jul 2025",
   },
   {
     num: "04",
     cat: "ai" as ProjectCategory,
-    title: "MCP HR Assistant",
-    desc: "AI-powered HR automation assistant built with Model Context Protocol (MCP). Handles leave management, meeting scheduling, and employee queries through natural language.",
-    stack: ["MCP", "LLMs", "Node.js", "TypeScript"],
-    github: "https://github.com/pratikguharoy",
+    title: "MCP Server HR Assistant",
+    desc: "Robust HR Leave Management System and Client Meeting Scheduler using FastMCP — the Python framework for context-aware LLM-powered applications. Includes dynamic tools, prompt handling, and resources for a mock employee database.",
+    stack: ["FastMCP", "Python", "LLMs", "MCP", "TypeScript"],
+    github: "https://github.com/PratikPorc",
+    date: "Jul 2025",
   },
   {
     num: "05",
     cat: "ml" as ProjectCategory,
     title: "Astrologer Recommender",
-    desc: "ML-powered recommendation engine that matches users with astrologers based on preferences, history, and real-time availability using collaborative filtering.",
-    stack: ["Python", "scikit-learn", "FastAPI", "Redis"],
-    github: "https://github.com/pratikguharoy",
+    desc: "Smart matching using semantic similarity (all-mpnet-base-v2 embeddings) and FAISS top-k search. LLM integration via Together.ai for response generation. FastAPI-first modular architecture.",
+    stack: ["Python", "FAISS", "FastAPI", "HuggingFace", "LLMs"],
+    github: "https://github.com/PratikPorc",
+    date: "Jul 2025",
   },
   {
     num: "06",
+    cat: "ml" as ProjectCategory,
+    title: "Opti Tracker — AI Focus & Posture Monitor",
+    desc: "Real-time facial landmark tracking using MediaPipe to monitor posture, attention, and fatigue. Audio feedback alerts for distraction/ergonomic issues. Interactive PyQt GUI with modular tracking, feedback, and UI components.",
+    stack: ["Python", "MediaPipe", "PyQt", "OpenCV", "TensorFlow"],
+    github: "https://github.com/PratikPorc",
+    date: "Nov 2024",
+  },
+  {
+    num: "07",
+    cat: "ai" as ProjectCategory,
+    title: "iCue AI — Intelligent Calendar Assistant",
+    desc: "Smart assistant that reads WhatsApp messages, detects events using Gemini NLP, and syncs them with Google Calendar via OAuth. Eliminates manual deadline entry and boosts productivity.",
+    stack: ["Node.js", "Gemini API", "Google Calendar API", "OAuth"],
+    github: "https://github.com/PratikPorc",
+    date: "Mar 2024",
+  },
+  {
+    num: "08",
+    cat: "ml" as ProjectCategory,
+    title: "Gender & Age Detection (CNN)",
+    desc: "Real-time computer vision tool using OpenCV and pre-trained deep learning models for age and gender classification via webcam feed.",
+    stack: ["Python", "TensorFlow", "Keras", "OpenCV"],
+    github: "https://github.com/PratikPorc",
+    date: "Jun 2025",
+  },
+  {
+    num: "09",
+    cat: "ml" as ProjectCategory,
+    title: "Job Salaries Prediction",
+    desc: "Analysed job posting data to understand correlation between skills, location, company type, and salary. ML regression model with feature engineering and evaluation using scikit-learn, Seaborn, and Matplotlib.",
+    stack: ["Python", "scikit-learn", "Pandas", "Seaborn", "Matplotlib"],
+    github: "https://github.com/PratikPorc",
+    date: "Jul 2024",
+  },
+  {
+    num: "10",
     cat: "backend" as ProjectCategory,
-    title: "Go Microservices API",
-    desc: "High-performance microservices architecture built in Go, with service discovery, load balancing, and gRPC communication. Handles 10K+ req/sec under load.",
-    stack: ["Go", "gRPC", "Docker", "PostgreSQL"],
-    github: "https://github.com/pratikguharoy",
+    title: "AI-Powered Freelancing Platform",
+    desc: "Backend development for an AI-powered platform matching freelancers with suitable jobs. Designed scalable APIs and structured the codebase using clean architecture principles.",
+    stack: ["Node.js", "Go", "PostgreSQL", "Docker", "AI Matching"],
+    github: "https://github.com/PratikPorc",
+    date: "Dec 2024 — Present",
+  },
+];
+
+export const certifications = [
+  {
+    title: "Project-Based Experiential Learning on AIML",
+    issuer: "IBM",
+    date: "Sep 2025 — Nov 2025",
+  },
+  {
+    title: "Developing Back-End Apps with Node.js and Express",
+    issuer: "IBM",
+    date: "Aug 2024 — Sep 2024",
+  },
+  {
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM / Coursera",
+    date: "Apr 2024 — May 2024",
+  },
+  {
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    date: "Apr 2024 — May 2024",
+  },
+  {
+    title: "Microsoft Azure Data Fundamentals",
+    issuer: "Microsoft",
+    date: "Apr 2024",
+  },
+  {
+    title: "Microsoft Cloud Skills Challenge",
+    issuer: "Microsoft",
+    date: "Mar 2024",
+  },
+  {
+    title: "JavaScript Bootcamp",
+    issuer: "LetsUpgrade",
+    date: "Mar 2024 — Sep 2024",
+  },
+  {
+    title: "Canva Bootcamp",
+    issuer: "LetsUpgrade",
+    date: "May 2024",
   },
 ];
 
 export const hackathons = [
   {
-    badge: "🏆 1st Place",
+    badge: "🏆 Winner",
     badgeClass: "gold",
     title: "Plot2Deploy Hackathon",
-    position: "Winner — 1st Place",
-    desc: "Built and deployed a full-stack AI application from concept to production in under 24 hours. Outcompeted multiple teams with an innovative AI-powered solution.",
+    position: "1st Place — GDSC, Techno India University",
+    desc: "Won the hackathon organised by the Google Developer Student Club at Techno India University, West Bengal. Built and deployed a full-stack AI application from concept to production.",
   },
   {
     badge: "🥈 4th Place",
     badgeClass: "silver",
     title: "Hack Horizon 2.0",
-    position: "4th Place among 187 teams",
-    desc: "Ranked 4th out of 187 competing teams. Developed an intelligent automation solution combining computer vision and NLP under intense time constraints.",
+    position: "4th among 187 teams — AJU Jharkhand",
+    desc: "Secured 4th position out of 187 teams in this 24-hour nationwide hackathon at AJU Jharkhand. Built an intelligent automation solution under intense time pressure.",
   },
   {
-    badge: "🎯 Kaggle",
-    badgeClass: "green",
-    title: "Kaggle Competitions",
-    position: "Top Rankings — ML Competitions",
-    desc: "Participated in multiple Kaggle competitions, solving real-world ML challenges across NLP, computer vision, and tabular data domains.",
-  },
-  {
-    badge: "⚡ LeetCode",
+    badge: "🎖️ Expert",
     badgeClass: "cyan",
-    title: "Competitive Programming",
-    position: "Active Problem Solver",
-    desc: "Consistently solving algorithmic challenges on LeetCode, sharpening data structures and algorithm skills across difficulty levels.",
+    title: "Postman API Fundamentals",
+    position: "Student Expert — Certified",
+    desc: "Completed and mastered the Postman API Fundamentals Student Expert certification, demonstrating proficiency in API design, testing, and documentation.",
+  },
+  {
+    badge: "☁️ Azure",
+    badgeClass: "green",
+    title: "Microsoft Cloud Skill Challenge",
+    position: "Completed — Microsoft",
+    desc: "Completed the Microsoft Cloud Skill Challenge, acquiring hands-on knowledge in Azure cloud technologies, data fundamentals, and cloud infrastructure.",
   },
 ];
 
 export const extracurriculars = [
-  { icon: "Mic", name: "MUN" },
-  { icon: "Music", name: "Drums" },
-  { icon: "Palette", name: "Painting" },
-  { icon: "Megaphone", name: "Public Speaking" },
-  { icon: "Gamepad2", name: "Chess" },
-  { icon: "Clapperboard", name: "Film Making" },
+  { icon: "🎙️", name: "MUN Secretariat" },
+  { icon: "🎬", name: "Drumming" },
+  { icon: "🥁", name: "Painting" },
+  { icon: "♟️", name: "Public Speaking" },
+  { icon: "🎨", name: "Chess" },
+  { icon: "🎤", name: "Film Making" },
 ];

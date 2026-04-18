@@ -6,7 +6,7 @@ import { experiences } from "@/lib/data";
 export default function Experience() {
   return (
     <Section id="experience">
-      <SectionHeader num="03" label="Experience" title="Career Path" />
+      <SectionHeader num="05" label="Experience" title="Career Path" />
       <div
         style={{
           position: "relative",

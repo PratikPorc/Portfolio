@@ -18,7 +18,7 @@ export default function Projects() {
 
   return (
     <Section id="projects">
-      <SectionHeader num="04" label="Projects" title="What I've Built" />
+      <SectionHeader num="06" label="Projects" title="What I've Built" />
 
       {/* Filter bar */}
       <div
@@ -87,13 +87,17 @@ export default function Projects() {
           >
             <div
               style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
                 fontFamily: "'Space Mono',monospace",
                 fontSize: "0.7rem",
                 color: "var(--text3)",
                 marginBottom: "1rem",
               }}
             >
-              {p.num} — {p.cat.toUpperCase()}
+              <span>{p.num} — {p.cat.toUpperCase()}</span>
+              {p.date && <span style={{ color: "var(--text3)" }}>{p.date}</span>}
             </div>
             <div
               style={{
