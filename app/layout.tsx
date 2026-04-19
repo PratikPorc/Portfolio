@@ -14,10 +14,15 @@ export const metadata: Metadata = {
   },
 };
 
+import AnimatedBackground from "./components/ui/AnimatedBackground";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AnimatedBackground />
+        {children}
+      </body>
     </html>
   );
 }
