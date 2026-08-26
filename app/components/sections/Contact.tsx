@@ -13,9 +13,15 @@ const socialLinks = [
   { icon: "⌃", label: "instagram.com/proooteeek", href: personalInfo.social.instagram },
 ];
 
+const EMAIL_REGEX = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+const isValidEmail = (value: string) => EMAIL_REGEX.test(value.trim());
+
 const inputStyle: React.CSSProperties = {
   background: "var(--bg3)",
-  border: "1px solid var(--border)",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: "var(--border)",
   borderRadius: 8,
   padding: "0.875rem 1rem",
   color: "var(--text)",
@@ -30,17 +36,43 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", _honeypot: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+    if (id === "email" && emailError) {
+      setEmailError(isValidEmail(value) ? "" : "Please enter a valid email address.");
+    }
+  };
+
+  const handleEmailBlur = () => {
+    if (!formData.email.trim()) {
+      setEmailError("Email is required.");
+      return;
+    }
+    setEmailError(isValidEmail(formData.email) ? "" : "Please enter a valid email address.");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (status === "loading") return;
 
+    if (!formData.name.trim() || !formData.message.trim()) {
+      setStatus("error");
+      setErrorMessage("Please fill in all fields.");
+      setTimeout(() => setStatus("idle"), 5000);
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
+    setEmailError("");
 
     try {
       const res = await fetch("/api/contact", {
@@ -146,6 +178,7 @@ export default function Contact() {
         {/* Right — form */}
         <form
           onSubmit={handleSubmit}
+          noValidate
           style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
         >
           {/* Honeypot field for spam prevention */}
@@ -161,37 +194,79 @@ export default function Contact() {
             />
           </div>
 
-          {[
-            { id: "name", label: "Name", type: "text", placeholder: "Your name" },
-            { id: "email", label: "Email", type: "email", placeholder: "your@email.com" },
-          ].map((field) => (
-            <div key={field.id} style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-              <label
-                htmlFor={field.id}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+            <label
+              htmlFor="name"
+              style={{
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "var(--text3)",
+                fontFamily: "'Space Mono',monospace",
+              }}
+            >
+              Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              disabled={status === "loading"}
+              style={{ ...inputStyle, opacity: status === "loading" ? 0.7 : 1 }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent2)")}
+              onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+            />
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+            <label
+              htmlFor="email"
+              style={{
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "var(--text3)",
+                fontFamily: "'Space Mono',monospace",
+              }}
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              placeholder="your@email.com"
+              value={formData.email}
+              onChange={handleChange}
+              onBlur={handleEmailBlur}
+              required
+              aria-invalid={Boolean(emailError)}
+              aria-describedby={emailError ? "email-error" : undefined}
+              disabled={status === "loading"}
+              style={{
+                ...inputStyle,
+                opacity: status === "loading" ? 0.7 : 1,
+                borderColor: emailError ? "#ef4444" : "var(--border)",
+              }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent2)")}
+            />
+            {emailError && (
+              <span
+                id="email-error"
                 style={{
                   fontSize: "0.75rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "var(--text3)",
+                  color: "#ef4444",
                   fontFamily: "'Space Mono',monospace",
                 }}
               >
-                {field.label}
-              </label>
-              <input
-                id={field.id}
-                type={field.type}
-                placeholder={field.placeholder}
-                value={(formData as any)[field.id]}
-                onChange={handleChange}
-                required
-                disabled={status === "loading"}
-                style={{ ...inputStyle, opacity: status === "loading" ? 0.7 : 1 }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent2)")}
-                onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
-              />
-            </div>
-          ))}
+                {emailError}
+              </span>
+            )}
+          </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
             <label

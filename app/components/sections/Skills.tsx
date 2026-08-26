@@ -1,8 +1,48 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Section from "../ui/Section";
 import SectionHeader from "../ui/SectionHeader";
+import LogoLoop from "../ui/LogoLoop";
 import { skillGroups } from "@/lib/data";
+import {
+  SiPython,
+  SiGo,
+  SiJavascript,
+  SiTypescript,
+  SiNodedotjs,
+  SiExpress,
+  SiFastapi,
+  SiTensorflow,
+  SiPytorch,
+  SiGooglegemini,
+  SiDocker,
+  SiGit,
+  SiGithub,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiPostman,
+} from "react-icons/si";
+
+const techLogos = [
+  { node: <SiPython />, title: "Python", href: "https://www.python.org" },
+  { node: <SiGo />, title: "Go", href: "https://go.dev" },
+  { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+  { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+  { node: <SiFastapi />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
+  { node: <SiTensorflow />, title: "TensorFlow", href: "https://www.tensorflow.org" },
+  { node: <SiPytorch />, title: "PyTorch", href: "https://pytorch.org" },
+  { node: <SiGooglegemini />, title: "Gemini", href: "https://ai.google.dev" },
+  { node: <SiDocker />, title: "Docker", href: "https://www.docker.com" },
+  { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+  { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
+  { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com" },
+  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  { node: <SiPostman />, title: "Postman", href: "https://www.postman.com" },
+];
 
 function SkillGroup({ label, skills }: { label: string; skills: { name: string; level: number }[] }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -87,6 +127,21 @@ export default function Skills() {
         {skillGroups.map((g) => (
           <SkillGroup key={g.label} label={g.label} skills={g.skills} />
         ))}
+      </div>
+
+      <div style={{ marginTop: "3rem" }}>
+        <LogoLoop
+          logos={techLogos}
+          speed={80}
+          direction="left"
+          logoHeight={42}
+          gap={48}
+          pauseOnHover
+          fadeOut
+          fadeOutColor="var(--bg)"
+          scaleOnHover
+          ariaLabel="Technologies I work with"
+        />
       </div>
     </Section>
   );
